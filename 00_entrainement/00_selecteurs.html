@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sélecteurs</title>
+    <style>
+        .avion {
+            background-color: pink;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="titre">Titre 2</h2>    
+    <div class="avion">Airbus 1- A320</div>
+    <div class="avion">Airbus 2 - A320</div>
+    <p class="avion">coucou le premier p</p>
+    <div class="avion">Airbus 2 - A320</div>
+
+    <p id="para">Paragraphe 1</p>
+    <p>paragraphe 2</p>
+    <p title="InfoBulle">paragraphe 3</p>
+    <p>paragraphe 4</p>
+    <p>paragraphe 5</p>
+    <p>coucou</p>
+    <p>coucou</p>
+    <p>coucou</p>
+    <p>coucou</p>
+
+    <script>
+        // sélection naturelle
+        var monTitre1 =  titre;
+        console.log(monTitre1);
+
+        // sélection par id
+        var monTitre2 =  document.getElementById('titre');
+        console.log(monTitre2);
+
+        // sélection par classe
+        var lesAvions = document.getElementsByClassName('avion');
+        console.log(lesAvions);
+
+        console.log(lesAvions[1]);
+
+        // injecter le texte suivant 'il est beau mon avion' dans l'élément indice 1 la div n°2
+        console.log(lesAvions[1].innerHTML);//innerHTML permet d'examiner dans la console le contenu d'un élément
+        lesAvions[1].innerHTML = 'Il est beau mon camion !';
+
+        console.log(lesAvions[1]);
+        console.log(lesAvions[1].innerHTML);
+
+        // modifier le contenu du h2 pour écrire "il est beau mon bonnet !"
+        console.log(monTitre2.innerHTML);
+        monTitre2.innerHTML = 'Il est beau le bonnet de Redha !';
+
+        // par nom d'éléments
+
+        let lesP = document.getElementsByTagName('p');
+        console.log(lesP);
+
+        console.log(lesP[2].innerHTML);
+
+        // faire une boucle for pour passer le texte des p en red et mettre une margin top aux p de 30px
+
+
+        for (let i = 0; i < lesP.length; i++) {
+            console.log(lesP[i]);
+            lesP[i].style.color = "red";
+            lesP[i].style.marginTop = "10px";
+            //+= ajoute et affecte
+            lesP[i].innerHTML += ' les loulous';
+        }
+
+        // on essaie maintenant avec query
+
+        // on sélectionne les p avec query
+
+        let lesP2 = document.querySelectorAll('p');
+        console.log(lesP2);
+
+        let lesAvions2 = document.querySelectorAll('.avion');
+        console.log(lesAvions2);
+
+        let paraP = document.querySelector('p#para');
+        console.log(paraP);
+
+        let divAvion = document.querySelectorAll('div.avion');
+        console.log(divAvion);
+
+        // à  la seconde div on applique maintenant un fond bleu, un texte blanc, en gras et taille de typo 2em
+
+        console.log(divAvion[1].innerHTML);
+
+        divAvion[1].style.backgroundColor = "lightblue";
+        divAvion[1].style.color = "white";
+        divAvion[1].style.fontWeight = "bold";
+        divAvion[1].style.fontSize = "2em";
+        divAvion[1].style.height = "400px";
+        divAvion[1].style.width = "400px";
+    </script>
+</body>
+</html>

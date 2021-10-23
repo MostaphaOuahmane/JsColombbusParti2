@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <title>JavaScript - II/04 opérateurs</title>   
+    <link rel="stylesheet" href="../css/styles.css">
+    </head>
+
+<body>
+    <!-- =========================== -->
+    <!-- En-tête de page -->
+    <!-- =========================== -->
+    <div class="container-fluid bg-info p-5 text-center">
+        <h1 class="display-4">JavaScript - II/04 - <i class="bi bi-calculator text-white"></i> Les opérateurs arithmétiques</h1>
+        <p class="lead">...</p>
+    </div>
+    <!-- =========================== -->
+    <!-- Conteneur principal -->
+    <!-- =========================== -->
+    <div class="container p-4">
+        <section class="row mt-4">
+            <h2><i class="bi bi-calculator text-danger"></i>Qu'est-ce qu'un opérateur ?</h2>
+            <div class="col-sm-4">
+                
+                <p><i class="bi bi-calculator text-danger"></i>- Un opérateur est un symbole qui va effectuer certaines opérations sur les variables et leurs valeurs. Par exemple l'opérateur * va permettre de multiplier les valeurs de deux variables.</p>
+            </div>
+            <!-- fin col  -->
+
+            <!-- section.row>div.col*12>p{$} -->
+            <div class="col-sm-4">
+                <h3>Le modulo et l'exponentielle : késako ? </h3>
+                <!-- dl>dt*2+dd*2 -->
+                <dl>
+                    <dt class="bg-light">Modulo</dt>
+                    <dd>Le reste entier d'une division euclidienne. On divise 5 par 3 le résultat est 1 et il reste 2 : le reste est le modulo</dd>
+                    <dt class="bg-light">Exponentielle</dt>
+                    <dd>L’exponentielle correspond à l’élévation à la puissance d’un nombre par un autre nombre : ex. 2<sup>3</sup></dd>
+                </dl>
+            </div>
+            <!-- fin col  -->
+            <div class="col-sm-4">
+                <table class="table table-sm table-striped table-hover m-1">
+                    <caption class="bg-warning">Tableau des opérateurs arihtmétiques</caption>
+                    <thead>
+                        <tr>
+                            <th>Opérateurs</th>
+                            <th>Nom de l'opération</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>+</td>
+                            <td>Addition</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>Soustraction</td>
+                        </tr>
+                        <tr>
+                            <td>*</td>
+                            <td>Multiplication</td>
+                        </tr>
+                        <tr>
+                            <td>/</td>
+                            <td>Division</td>
+                        </tr>
+                        <tr>
+                            <td>%</td>
+                            <td>Modulo</td>
+                        </tr>
+                        <tr>
+                            <td>**</td>
+                            <td>Exponentielle</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- fin col  -->
+        </section>
+        <!-- fin rangée  -->
+
+        <section class="row justify-content-start mt-4">
+            <h3 class="bg-warning w-50">Priorité des calculs & utilisation des parenthèses</h3>
+            <hr>
+            <div class="col-sm-4 bg-light">
+                <h4>De gauche à droite sauf ...</h4>
+                <p>Si on écrit cf. <code>let h = 1 - 2 - 3;</code> le résultat est -4 les opérations se font de gauche à droite.</p>
+                <p>A l'exception de l'élévation à la puissance qui sera calculée en partant de lal fin cf. <code>let k = 2 ** 3 ** 2; </code> qui correspond à 2<sup>3</sup> = 8 puis 8<sup>3</sup> = 512</p>
+            </div>
+            <!-- fin col  -->
+
+            <div class="col-sm-4">
+                <h3>Avec des parenthèses</h3>
+                <p>Nous allons finalement, comme en mathématiques, pouvoir forcer l’ordre de priorité en utilisant des parenthèses pour indiquer qu'une opération doit être effectuée avant les autres cf. <code>let l = (1 - 2) * 3;</code></p>
+            </div>
+            <!-- fin col -->
+
+        </section>
+        <!-- fin rangée  -->
+
+        <section class="row justify-content-center mt-4">
+            <h2>Les opérateurs d'affectation</h2>
+            <div class="col-sm-4 align-self-center bg-info">
+                <p>Les opérateurs d'affectation vont nous permettre d'affecter une certaine valeur à une variable.</p>
+                <p>= est l'opérateur le plus utilisé</p>
+            </div>
+            <!-- fin col -->
+
+            <div class="col-sm-4">
+                <table class="table table-sm table-striped table-hover m-1">
+                    <caption>Opérateurs d'affectation</caption>
+                    <thead>
+                        <tr>
+                            <th>Opérateurs</th>
+                            <th>Définition</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>+=</td>
+                            <td>Additionne puis affecte le résultat</td>
+                        </tr>
+                        <tr>
+                            <td>-=</td>
+                            <td>Soustrait puis affecte le résultat</td>
+                        </tr>
+                        <tr>
+                            <td>*=</td>
+                            <td>Multiplie puis affecte le résultat</td>
+                        </tr>
+                        <tr>
+                            <td>/=</td>
+                            <td>Divise puis affecte le résultat</td>
+                        </tr>
+                        <tr>
+                            <td>%=</td>
+                            <td>Calcule le modulo puis affecte le résultat</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Les opérateurs d'affectation combinés nous permettent d'effecture deux types d'opératoins à la suite. On réalise des opérations arithmétiques puis d'affectation.</p>
+            </div>
+            <!-- fin col -->
+        </section>
+
+        
+    </div>
+    <!-- fin div container -->
+
+    <!-- Optional JavaScript -->
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+        <!-- Mes scripts JS en externe -->
+        <script src="operateurs.js"></script>
+</body>
+</html>

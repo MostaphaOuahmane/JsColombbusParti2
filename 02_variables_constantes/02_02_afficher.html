@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <title>JavaScript - II/02 affichage</title> 
+     <!-- Mes scripts JS en externe avec async = asynchrone avec avertissement-->
+     <!-- <script src="affichage.js" async></script> -->
+     <!-- avec deefer je n'ai pas d'avertissement  -->
+     <!-- <script src="affichage.js" defer></script> -->    
+
+    </head>
+
+<body>
+    <!-- =========================== -->
+    <!-- NavBar expand at md -->
+    <!-- =========================== -->
+
+    <nav class="navbar navbar-expand-sm navbar-light" aria-label="Cours JavaScript" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">JS</a>
+          <!-- pour le burger  -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarsExample03">
+            <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                <!-- menu intro 01  -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Intro</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                      <li><a class="dropdown-item" href="../01_introduction/01-01-intro.html">Afficher heure</a></li>
+                      <li><a class="dropdown-item" href="../01_introduction/01-02-intro.html">Coucou !</a></li>
+                      <li><a class="dropdown-item" href="../01_introduction/01-03-intro.html">Cliquez sur moi</a></li>
+                      <li><a class="dropdown-item" href="../01_introduction/01-04-intro.html">Ordre du code</a></li>
+                    </ul>
+                  </li>
+
+                <!-- menu variables 02  -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Variables</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                      <li><a class="dropdown-item" href="../02_variables_constantes/02_01_intro.html">Intro</a></li>
+                      <li><a class="dropdown-item active" href="../02_variables_constantes/02_02_afficher.html">Afficher !</a></li>
+                      <li><a class="dropdown-item" href="../02_variables_constantes/02_03_types.html">Types</a></li>
+                      <li><a class="dropdown-item" href="../02_variables_constantes/02_04_operateurs.html">Opérateurs</a></li>
+                      <li><a class="dropdown-item" href="../02_variables_constantes/02_05_concatenation.html">Concaténation</a></li>
+                    </ul>
+                  </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+            <!-- <form>
+              <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+            </form> -->
+          </div>
+        </div>
+      </nav>
+    
+    <!-- =========================== -->
+    <!-- En-tête de page -->
+    <!-- =========================== -->
+    <div class="container-fluid bg-info p-5 text-center">
+        <h1 class="display-4"><i class="bi bi-arrow-right-circle"></i> JavaScript - II/02 - affichage</h1>
+        <p class="lead">Comment afficher des variables</p>
+    </div>
+    <!-- =========================== -->
+    <!-- Conteneur principal -->
+    <!-- =========================== -->
+    <div class="container">
+        <section class="row mt-4">
+            <div class="col-sm-6">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi sed architecto dolorem molestias impedit quasi commodi voluptas ratione. Deserunt nulla quam aliquam similique quisquam quibusdam voluptatibus, accusantium consectetur ipsum exercitationem!</p>
+            </div>
+        </section>
+        <!-- fin rangée  -->
+    </div>
+    <!-- fin div container -->
+
+    <!-- Optional JavaScript -->
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+        <!-- Mes scripts JS en externe, ici pas besoin de async ni de defer le script se charge en dernier et ne stoppe pas le chargement du HTML et du CSS  -->
+        <!-- la solution la plus utilisée -->
+        <script src="affichage.js"></script>
+</body>
+</html>
