@@ -16,3 +16,11 @@ console.log(typeof getAttrImg,getAttrImg);
          clearInterval(timer);
      }
  }
+
+ 4//formulaire
+
+ document.querySelector('#email').addEventListener('focus',InputEmailFocus);
+
+ function InputEmailFocus(){
+     this.classList.add('bg-pink');
+ }

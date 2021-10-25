@@ -59,17 +59,16 @@
                     <!-- action pour envoyer lr form method soit get soit post -->
                     <div class="col-md-6 ">
 
-                        <label for="exampleInputEmail1" class="form-label">Adresse E-mail</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">Nous ne partagerons jamais votre e-mail avec quelqu'un
-                            d'autre.</div>
+                        <label for="email" class="form-label"> E-mail</label>
+                        <input type="email" class="form-control" id="email"  name="email" aria-describedby="emailHelp" required>
                     </div>
                     <div class="col-md-6">
-                        <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
+                        <label for="pass" class="form-label">password</label>
+                        <input type="password" class="form-control" id="pass" required>
                     </div>
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary">Se connecter</button> 
+                        <button type="reset" class="btn btn-danger" id ="reset">Effacer</button> 
+                        <button type="submit" class="btn btn-primary" id ="submit">Se connecter</button> 
                     </div>
                     
                 </form>
