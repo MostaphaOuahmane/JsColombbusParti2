@@ -12,16 +12,16 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
-    <title>JavaScript - VII/01 - Les évènements</title>   
+    <title>JavaScript - VII/01 - Les évènements</title>
     <link rel="stylesheet" href="../css/styles.css">
-    </head>
+</head>
 
 <body>
     <!-- ================= -->
     <!-- En-tête de page -->
     <!-- ================= -->
     <div class="container-fluid bg-info p-5 text-center">
-        <h1 id="titreN1" class="display-4" >JavaScript - VII/01 - Les évènements</h1>
+        <h1 id="titreN1" class="display-4">JavaScript - VII/01 - Les évènements</h1>
         <p class="lead">Les évènements en JS</p>
     </div>
     <!-- ================= -->
@@ -36,7 +36,7 @@
                 <p id="p1">Un simple clique sur ce paragraphe</p>
             </div>
             <!-- fin col -->
-            
+
             <div class="col-12 col-md-3 bg-warning text-white">
                 <div id="rouge">#rouge</div>
             </div>
@@ -53,9 +53,33 @@
 
         </section>
         <!-- fin rangée -->
+        <section class=" row mt-4">
+            <div class="col-md-8">
+                <form action="" class=" row g-3 border border-dark border-5 p-2" method="post">
+                    <!-- action pour envoyer lr form method soit get soit post -->
+                    <div class="col-md-6 ">
 
-        
-        
+                        <label for="exampleInputEmail1" class="form-label">Adresse E-mail</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">Nous ne partagerons jamais votre e-mail avec quelqu'un
+                            d'autre.</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Se connecter</button> 
+                    </div>
+                    
+                </form>
+
+            </div>
+
+        </section>
+
+
+
     </div>
     <!-- fin div container -->
 
@@ -66,7 +90,8 @@
         crossorigin="anonymous"></script>
 
 
-        <script src="../js/mon_js.js"></script>
-        <script src="introduction.js"></script>
+    <script src="../js/mon_js.js"></script>
+    <script src="introduction.js"></script>
 </body>
+
 </html>
