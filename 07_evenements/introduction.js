@@ -63,40 +63,4 @@ function fonctionDivBleu(e) {
     this.style.fontSize = "1.5em";
 }
 
-
- 4//formulaire
-
- document.querySelector('#email').addEventListener('focus',InputEmailFocus);
-//  focus qaund on est dans le champs
-
- function InputEmailFocus(){
-     this.classList.add('bg-secondary');
-     this.classList.add('text-white');
- }
-//  document.querySelector('#email').addEventListener('focusout',InputPassFocus);
-
-//  function InputPassFocus(){
-//      this.classList.add('btn-primary');
-//      this.classList.add('text-white');
-//  }
-
-
-document.querySelector('#pass').addEventListener('blur',InputPassBlur);
-
-// blur  change l'apparence quand il perd le focus
-
-function InputPassBlur(){
-    this.classList.add('btn-primary');
-    this.classList.add('text-white');
-}
-// écouteur d'évènement  sur le bouton avec click
-
-document.querySelector('#submit').addEventListener('click',inptBtnSubmit);
-function inptBtnSubmit(event) {
-    // event.preventDefaul();
-    alert('Nous avons bien reçu votre Formulaire');
-    this.classList.add('bg-success');
-    this.innerHTML="Félicitation vous êtes connecté";
-}
-
-
+//4- Formulaire
