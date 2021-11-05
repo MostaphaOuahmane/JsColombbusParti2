@@ -14,6 +14,28 @@
 
     <title>JavaScript - VIII/04 - Formulaires</title>
     <link rel="stylesheet" href="../css/styles.css" />
+    <style>
+        .error {
+            border: 5px solid red;
+        }
+        .valide  {
+            border: 5px solid greenyellow;
+        }
+        .rouge {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 300;
+            background-color: rgb(48, 46, 35,0.1);
+            color:red;
+            display: flex;
+            justify-content: center;
+            position:absolute;
+            top: -50%;
+            bottom: -50%;
+            border: 2px solid brown;
+            border-radius: 25px;
+            margin: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -88,13 +110,13 @@
                     <div class="form-floating mb-3">
                         <input type="password" class="form-control" name="mdp2" id="mdp2"
                             placeholder="choissez un mot de passe">
-                        <label for="mdp2 ">Choissez un mot de passe</label>
+                        <label for="mdp2 " id="placeholder1">Choissez un mot de passe</label>
                     </div>
 
                     <div class="form-floating mb-3">
                         <input type="password" class="form-control" name="confmdp2" id="confmdp2"
                             placeholder="Confirmez Votre mot de passe">
-                        <label for="confmdp2">Confirmez Votre mot de passe</label>
+                        <label for="confmdp2" id="placeholder2">Confirmez Votre mot de passe</label>
                     </div>
                     <div>
                         <button type="submit" id="submit2" value="inscription" class="btn btn-primary">Je
