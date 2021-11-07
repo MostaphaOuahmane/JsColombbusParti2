@@ -1,164 +1,235 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
+  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
 
     <title>JavaScript - VIII/04 - Formulaires</title>
     <link rel="stylesheet" href="../css/styles.css" />
     <style>
-        .error {
-            border: 5px solid red;
-        }
-        .valide  {
-            border: 5px solid greenyellow;
-        }
-        .rouge {
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
-            font-weight: 300;
-            background-color: rgb(48, 46, 35,0.1);
-            color:red;
-            display: flex;
-            justify-content: center;
-            position:absolute;
-            top: -50%;
-            bottom: -50%;
-            border: 2px solid brown;
-            border-radius: 25px;
-            margin: auto;
-        }
+      .error {
+        border: 5px solid red;
+      }
+      .valide {
+        border: 5px solid greenyellow;
+      }
+      .rouge {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 300;
+        background-color: rgb(48, 46, 35, 0.1);
+        color: red;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: -50%;
+        bottom: -50%;
+        border: 2px solid brown;
+        border-radius: 25px;
+        margin: auto;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- ================= -->
     <!-- En-tête de page -->
     <!-- ================= -->
     <div class="container-fluid bg-info p-5 text-center">
-        <h1 id="titreN1" class="display-4">JavaScript - VIII/04 - Formulaires</h1>
-        <p class="lead">Deux formulaires</p>
+      <h1 id="titreN1" class="display-4">JavaScript - VIII/04 - Formulaires</h1>
+      <p class="lead">Deux formulaires</p>
     </div>
     <!-- ================= -->
     <!-- Conteneur principal -->
     <!-- ================= -->
     <div class="container p-4">
-        <!-- 1er formulaire -->
-        <section class="row mt-4 border border-danger p-4">
-            <div class="col-5">
-                <h2>Formulaire 1</h2>
-                <p>Fonction controleForm()</p>
+      <!-- 1er formulaire -->
+      <section class="row mt-4 border border-danger p-4">
+        <div class="col-5">
+          <h2>Formulaire 1</h2>
+          <p>Fonction controleForm()</p>
+        </div>
+        <!-- fin col -->
+
+        <div class="col-7">
+          <div class="row">
+            <form
+              action="#"
+              method="GET"
+              name="form1"
+              class="form-inline bg-success"
+            >
+              <div class="col-5">
+                <label for="pseudo">Pseudo</label>
+                <input
+                  type="text"
+                  name="pseudo"
+                  id="pseudo"
+                  placeholder="Votre Pseudo"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <div class="col-5">
+                <label for="mdp">Mot de passe</label>
+                <input
+                  type="password"
+                  name="mdp"
+                  id="mdp"
+                  placeholder="Votre Mot de Passe"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <div class="col-2">
+                <button
+                  type="submit"
+                  id="submit"
+                  value="ok"
+                  class="btn btn-primary"
+                  onclick="controleForm()"
+                >
+                  Connexion
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="row mt-4 border border-succes">
+        <div class="col-4">
+          <h2>Formulaire 2</h2>
+          <p>Fonction inscriptionForm();</p>
+        </div>
+        <!-- fin  col -->
+        <div class="col-8 mt-4 mb-4">
+          <form
+            action="#"
+            method="post"
+            name="inscription"
+            id="formulaireInscription"
+          >
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                name="prenom"
+                id="prenom"
+                placeholder="Prénom"
+              />
+              <label for="prenom">Prénom</label>
             </div>
-            <!-- fin col -->
 
-            <div class="col-7">
-
-                <div class="row">
-                    <form action="#" method="GET" name="form1" class="form-inline bg-success">
-                        <div class="col-5">
-                            <label for="pseudo">Pseudo</label>
-                            <input type="text" name="pseudo" id="pseudo" placeholder="Votre Pseudo" class="form-control"
-                                required>
-                        </div>
-
-                        <div class="col-5">
-                            <label for="mdp">Mot de passe</label>
-                            <input type="password" name="mdp" id="mdp" placeholder="Votre Mot de Passe"
-                                class="form-control" required>
-                        </div>
-
-                        <div class="col-2">
-                            <button type="submit" id="submit" value="ok" class="btn btn-primary "
-                                onclick="controleForm()">Connexion</button>
-                        </div>
-                    </form>
-                </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                name="nom"
+                id="nom"
+                placeholder="Nom"
+              />
+              <label for="nom">Nom de famille</label>
             </div>
-        </section>
 
-        <section class="row mt-4 border border-succes">
-            <div class="col-4">
-                <h2>Formulaire 2</h2>
-                <p>Fonction inscriptionForm();</p>
+            <div class="form-floating mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="nom@exemple.com"
+              />
+              <label for="email">nom@exemple.com</label>
             </div>
-            <!-- fin  col -->
-            <div class="col-8 mt-4 mb-4">
-                <form action="#" method="post" name="inscription" id="formulaireInscription">
 
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Prénom">
-                        <label for="prenom">Prénom</label>
-                    </div>
-
-                    <div class="form-floating mb-3">
-                        <input type=text" class="form-control" name="nom" id="nom" placeholder="Nom">
-                        <label for="nom">Nom de famille</label>
-                    </div>
-
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="email" placeholder="nom@exemple.com">
-                        <label for="email">nom@exemple.com</label>
-                    </div>
-
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control" name="mdp2" id="mdp2"
-                            placeholder="choissez un mot de passe">
-                        <label for="mdp2 " id="placeholder1">Choissez un mot de passe</label>
-                    </div>
-
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control" name="confmdp2" id="confmdp2"
-                            placeholder="Confirmez Votre mot de passe">
-                        <label for="confmdp2" id="placeholder2">Confirmez Votre mot de passe</label>
-                    </div>
-                    <div>
-                        <button type="submit" id="submit2" value="inscription" class="btn btn-primary">Je
-                            m'inscris</button>
-                        <!-- <button type="reset" class="btn btn-danger">Effacer</button> -->
-                        <button id="restForm" class="btn btn-danger">Effacer</button>
-                    </div>
-                </form>
+            <div class="form-floating mb-3">
+              <input
+                type="password"
+                class="form-control"
+                name="mdp2"
+                id="mdp2"
+                placeholder="choissez un mot de passe"
+              />
+              <label for="mdp2 " id="placeholder1"
+                >Choissez un mot de passe</label
+              >
             </div>
-        </section>
+
+            <div class="form-floating mb-3">
+              <input
+                type="password"
+                class="form-control"
+                name="confmdp2"
+                id="confmdp2"
+                placeholder="Confirmez Votre mot de passe"
+              />
+              <label for="confmdp2" id="placeholder2"
+                >Confirmez Votre mot de passe</label
+              >
+            </div>
+            <div>
+              <button
+                type="submit"
+                id="submit2"
+                value="inscription"
+                class="btn btn-primary"
+              >
+                Je m'inscris
+              </button>
+              <!-- <button type="reset" class="btn btn-danger">Effacer</button> -->
+              <button id="restForm" class="btn btn-danger">Effacer</button>
+            </div>
+          </form>
+        </div>
+      </section>
     </div>
     <!-- fin div container -->
 
     <!-- Optional JavaScript -->
     <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
     <script src="formulaire.js"></script>
 
     <!-- JS pour les deux formulaires  -->
     <script>
-        // // alert('coucou');
-        // // Controle du formulaire avec une fonction 
-        // // On verifie la longueur des contenus dans les 2 input
+      // // alert('coucou');
+      // // Controle du formulaire avec une fonction
+      // // On verifie la longueur des contenus dans les 2 input
 
-        // function controleForm() {//event paramètre a enlever également
-        //      //event.preventDefault(); // pour empecher l'envoi du formulaire, à enlever quand le site est terminé
+      // function controleForm() {//event paramètre a enlever également
+      //      //event.preventDefault(); // pour empecher l'envoi du formulaire, à enlever quand le site est terminé
 
-        //     if (document.form1.pseudo.value.length < 5 || document.form1.pseudo.value.length > 15 ) {
-        //         console.log(document.form1.pseudo.value);
-        //         console.log(document.form1.pseudo.value.length);
-        //         alert('Votre pseudo dois contenir entre 5 et 15 caractère');
-        //     }
+      //     if (document.form1.pseudo.value.length < 5 || document.form1.pseudo.value.length > 15 ) {
+      //         console.log(document.form1.pseudo.value);
+      //         console.log(document.form1.pseudo.value.length);
+      //         alert('Votre pseudo dois contenir entre 5 et 15 caractère');
+      //     }
 
-        //     if (document.form1.mdp.value.length < 3 || document.form1.mdp.value.length > 12 ) {
-        //         console.log(document.form1.mdp.value);
-        //         console.log(document.form1.mdp.value.length);
-        //         alert('Votre mot de passe dois contenir entre 3 et 12 caractère');
-        //     }
-        // }
+      //     if (document.form1.mdp.value.length < 3 || document.form1.mdp.value.length > 12 ) {
+      //         console.log(document.form1.mdp.value);
+      //         console.log(document.form1.mdp.value.length);
+      //         alert('Votre mot de passe dois contenir entre 3 et 12 caractère');
+      //     }
+      // }
     </script>
-</body>
-
+  </body>
 </html>
